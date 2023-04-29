@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="ClientGUI.UserControlEditInfo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ClientGUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             Loaded="OnLoad">
+    <Grid Background="LightBlue">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        
+        <TextBlock HorizontalAlignment="Center" Padding="15 0" VerticalAlignment="Center" Text="Test Main Info" FontSize="20"/>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Column="1" Grid.Row="0" VerticalAlignment="Center">Name</Label>
+            <TextBox Name="tbInfoName" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center" Width="200" Height="20"/>
+            <Label Grid.Column="1" Grid.Row="1" VerticalAlignment="Center">Author</Label>
+            <TextBlock Name="tbInfoAuthor" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Width="200" Height="20"/>
+            <Label Grid.Column="1" Grid.Row="2" VerticalAlignment="Center">AuthorID</Label>
+            <TextBlock Name="tbInfoAuthorID" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center" MinWidth="200" Height="20"/>
+            <Label Grid.Column="1" Grid.Row="3" VerticalAlignment="Center">Date</Label>
+            <DatePicker Name="tbInfoDate" Grid.Column="2" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Label Grid.Column="1" Grid.Row="4" VerticalAlignment="Center">Start at</Label>
+            <TextBox Name="tbInfoStart" Grid.Column="2" Grid.Row="4" Width="50" Height="20" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Label Grid.Column="1" Grid.Row="5" VerticalAlignment="Center">Duration</Label>
+            <TextBox Name="tbInfoDuration" Grid.Column="2" Grid.Row="5" Width="50" Height="20" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <CheckBox Name="cbInfoRndQuestions" Grid.Column="1" Grid.Row="6" VerticalAlignment="Center">Randomize?</CheckBox>
+        </Grid>
+        <StackPanel Grid.Row="1" Orientation="Vertical">
+
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="2">
+            <Button Content="Save" Padding="5" Margin="50 0 0 0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="buttonSaveOnClick"/>
+            <Button Content="Clear" Padding="5" Margin="50 0 0 0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="buttonClearOnClick"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
